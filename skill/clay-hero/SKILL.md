@@ -63,7 +63,7 @@ Gemini 웹(`gemini.google.com/image`, 무료) 실측 절차 — Chrome MCP:
 
 등장 타이밍(레퍼런스 실측, JS에 박혀 있음): 배경 즉시 → 350ms 후 제목 타이핑(글자 110ms·공백 60ms·줄 끝 260ms) → 끝나고 250ms 부제 → 650ms CTA. **타이핑 대상은 제목(h1)이다. 브랜드명이 아니다.** 스틸은 2.8초 머묾·0.9초 교차, 화면 밖이면 멈춤.
 
-SPA·해시 라우터면 렌더 직후 `window.CH.mount(el)` 재호출.
+SPA·해시 라우터면 렌더 직후 `window.CH.mount(el)` 재호출. `--ch-dwell`을 바꾸면 verify.mjs가 그 값을 읽어 대기 시간을 맞춘다.
 
 ## 4. 검증 (완료 보고 전 필수)
 
@@ -77,7 +77,7 @@ SPA·해시 라우터면 렌더 직후 `window.CH.mount(el)` 재호출.
 | 파일 | 내용 |
 |---|---|
 | `assets/hero/markup.html · clay-hero.css · clay-hero.js` | 히어로 템플릿 (스틸/비디오 겸용) |
-| `assets/demo/index.html` + `clay-01~03.jpg` | 꽃집 데모 — Gemini로 뽑은 스틸 3장(입학·졸업·결혼) |
+| `assets/demo/index.html` + `clay-01~03.jpg` | 꽃집 데모 — Gemini로 뽑은 스틸 3장(입학·졸업·결혼). **조립 확인용이다. 다른 업종 납품엔 그 업종 스틸을 새로 뽑는다** |
 | `assets/reference/ref1·ref2-frames.jpg` | 레퍼런스 영상 프레임 격자 |
 | `references/reference-analysis.md` | 레이아웃 수치·타이밍·배경 방식 비교 |
 | `references/prompts.md` | 공통 블록·업종별 순간 표·영상 프롬프트·생성 실패 대처 |

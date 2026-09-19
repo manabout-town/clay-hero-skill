@@ -19,7 +19,8 @@ for (const [w, h] of [[1440, 820], [430, 932], [390, 844], [320, 700]]) {
   await p.waitForTimeout(900);
   await p.screenshot({ path: `${out}/done-${w}.png` });
   const before = await p.evaluate(() => ({ i: document.querySelector('.ch-hero')?.dataset.chIndex, t: document.querySelector('.ch-video')?.currentTime }));
-  await p.waitForTimeout(3200);
+  const dwell = await p.evaluate(() => parseFloat(getComputedStyle(document.querySelector('.ch-hero')).getPropertyValue('--ch-dwell')) || 2800);
+  await p.waitForTimeout(dwell + 400);  // 스틸 한 장 머무는 시간(--ch-dwell) + 여유
   const r = await p.evaluate((before) => {
     const hero = document.querySelector('.ch-hero'), h = hero.querySelector('[data-ch-type]');
     const vis = el => el && getComputedStyle(el).opacity !== '0' && el.getBoundingClientRect().height > 0;

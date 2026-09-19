@@ -6,7 +6,7 @@
 
 | 도구 | 무엇 | 비용 | 메모 |
 |---|---|---|---|
-| Gemini 웹 `gemini.google.com/image` | 스틸 | 무료 ~20장/일 | Nano Banana 2. 비율 선택기에서 16:9. 다운로드는 hover→우상단 아이콘 좌표 클릭. 우하단 ✦ 워터마크 → `make-assets.sh`가 지움 |
+| Gemini 웹 `gemini.google.com/image` | 스틸 | 무료 ~20장/일 | Nano Banana 2. 비율 선택기에서 16:9. 저장은 blob img를 `<a download>`로 click()(SKILL.md 2절). 우하단 ✦ 워터마크 → `make-assets.sh`가 지움 |
 | Google Flow `flow.google.com` | 스틸 여러 장 한 번에·**영상(Veo)** | 구독 | 에이전트 패널에 프롬프트 전부 넣고 "각 프롬프트 글자 그대로" 요청. 영상은 참조 이미지(첫 프레임) + 동작문 |
 | Higgsfield MCP `generate_image`(nano_banana_pro) / `generate_video`(kling3_0·seedance) | 스틸·영상 | 크레딧 | 크레딧 0이면 위 둘 |
 
@@ -19,7 +19,8 @@ clothing, big round black bead eyes, small painted smiles.
 Background: a flat matte plaster wall in {벽색: dusty rose pink / warm grey / sage green},
 lightly textured, no props, no floor visible.
 Camera locked at chest height, straight on, figures framed from the knees up and placed
-in the right two-thirds of the frame, leaving the left third as empty wall.
+in the right two-thirds of the frame, leaving the left third as empty wall, head room
+above the figures, figures fill about 70% of the frame height, cropped at the knees.
 Soft studio light from upper left, gentle shadows, shallow depth of field.
 {인물 고정문 — 아래}
 {이 장면에서 바뀌는 것 — 옷·소품·표정 한두 문장}
@@ -31,13 +32,15 @@ No text, no letters, no logo, no watermark.
   `LEFT a mother with chin-length wavy brown clay hair, cream cable-knit sweater; CENTER a teenage son with short black tousled clay hair; RIGHT a father with round black glasses, short black hair, brown knit cardigan.`
 - 장면 줄 예(꽃집): ①`The son wears a navy school blazer and holds pink carnations wrapped in kraft paper.` ②`The son wears a black graduation gown and mortarboard, holding white roses.` ③`The son is now a groom in a black tuxedo beside a bride in a white dress, both holding bouquets.` ④`All three wear black mourning clothes, the son holding white chrysanthemums, eyes gently closed.`
 - 3장이면 충분하다. 4장째부터 체감이 안 늘고 용량만 는다.
+- "순간"은 인생 단계(입학→졸업)일 수도, 한 자리 안의 흐름(긴장→웃음→결과물)일 수도 있다. 제목이 말하는 쪽을 고른다.
 
 ## 2. 업종별 "순간" 표 (스틸 세트용)
 
 | 업종 | 인물 | 3~4 순간 | 벽색 |
 |---|---|---|---|
 | 꽃집 | 가족 3인 | 입학·졸업·결혼·추모 | 더스티 로즈 |
-| 사진관·스냅 | 커플 | 첫 데이트·프러포즈·웨딩·돌잔치 | 크림 |
+| 사진관·스냅 (커플) | 커플 | 첫 데이트·프러포즈·웨딩·돌잔치 | 크림 |
+| 사진관 (가족) | 부모+아기+조부모 | 긴장한 첫 포즈 → 웃음이 터진 순간 → 완성 액자를 함께 봄 | 크림 |
 | 학원·과외 | 학생+선생 | 첫 수업·시험 전날·합격 통지·졸업 | 세이지 |
 | 치과·병원 | 아이+부모 | 첫 방문 긴장·치료 중·스티커 받음·환한 웃음 | 민트 그레이 |
 | 카페·베이커리 | 사장 | 새벽 반죽·오픈 준비·손님 맞이·마감 | 오트밀 |
