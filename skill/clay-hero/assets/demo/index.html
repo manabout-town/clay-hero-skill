@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLOREN 찰흙 히어로 데모</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../hero/clay-hero.css">
+<style>
+  body { margin: 0; background: #F4EFEC; color: #1F1A1C; font-family: "Pretendard Variable", Pretendard, system-ui, sans-serif; }
+  .next { padding: 72px 24px; max-width: 720px; margin: 0 auto; font-size: 15px; line-height: 1.7; }
+</style>
+</head>
+<body>
+<!-- markup.html — 히어로 섹션 마크업. 사이트 <body> 맨 위에 넣고 clay-hero.css / clay-hero.js 를 연결한다.
+     배경은 둘 중 하나만 남긴다: (A) 스틸 3~4장  (B) 비디오 1개 + poster -->
+<section class="ch-hero" id="ch-hero" style="--ch-pos: 62% 50%; --ch-pos-m: 70% 38%;">
+  <div class="ch-bg" aria-hidden="true">
+    <!-- (A) 스틸 교차 페이드: 같은 인물·같은 벽, 순간만 바뀐다. 첫 장에 is-on. jpg 1600px 이하, 장당 150~250KB -->
+    <img class="ch-still is-on" src="clay-01.jpg" alt="" fetchpriority="high" decoding="async">
+    <img class="ch-still" src="clay-02.jpg" alt="" loading="lazy" decoding="async">
+    <img class="ch-still" src="clay-03.jpg" alt="" loading="lazy" decoding="async">
+
+    <!-- (B) 비디오: 6~8초 루프, 무음, 3MB 이하. poster는 첫 프레임. 자동재생 실패하면 JS가 숨기고 poster가 남는다
+    <img class="ch-still is-on" src="poster.jpg" alt="" fetchpriority="high">
+    <video class="ch-video" autoplay muted loop playsinline preload="metadata" poster="poster.jpg">
+      <source src="clay.webm" type="video/webm">
+      <source src="clay.mp4" type="video/mp4">
+    </video> -->
+  </div>
+  <div class="ch-shade" aria-hidden="true"></div>
+
+  <header class="ch-nav">
+    <a class="ch-brand" href="#">FLOREN</a>
+    <nav class="ch-menu" aria-label="주요 메뉴">
+      <a href="#about">회사 소개</a><a href="#service">서비스 소개</a><a href="#products">상품 안내</a><a href="#map">오시는 길</a>
+    </nav>
+    <a class="ch-nav-cta" href="#contact">문의하기</a>
+  </header>
+
+  <div class="ch-copy">
+    <span class="ch-chip">꽃집 플로렌</span>
+    <!-- 제목 = 고객의 질문·고민 한 문장, 2줄. <br>로 줄을 정한다(타이핑도 그 줄에서 바뀐다) -->
+    <h1 class="ch-title" data-ch-type>꽃이 필요한 모든 순간,<br>당신 곁에 함께합니다</h1>
+    <p class="ch-sub">축하의 순간부터 위로가 필요한 날까지,<br>설레는 시작부터 깊은 추억의 순간까지</p>
+    <a class="ch-cta" href="#products">추억을 선물하세요 →</a>
+  </div>
+
+  <div class="ch-float">
+    <a href="tel:0000000000" aria-label="전화 걸기"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></a>
+    <a href="#contact" aria-label="상담 문의"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.5 3.4 6L4.6 21l4.3-2.3c1 .2 2 .3 3.1.3 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg></a>
+  </div>
+</section>
+<section class="next"><p>다음 섹션. 히어로가 화면 밖으로 나가면 배경 교차 페이드가 멈춘다.</p></section>
+<script src="../hero/clay-hero.js"></script>
+</body>
+</html>
